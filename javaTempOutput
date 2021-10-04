@@ -1,0 +1,30 @@
+public class tempOutput {
+    static double celToFah(double temp) {
+        return (temp * 9 / 5) +32;
+    }
+    static double fahToCel(double temp) {
+        return (temp - 32) * 5/9;
+    }
+
+    public static void main(String[] args) {
+
+        double tempBase = -45;
+        double tempC = 0;
+        double tempF = 0;
+        int increment = 5;
+        String tempStr = "Temperature";
+        String degrees = "(degrees)";
+
+        System.out.println("\tTemperature Conversion Tables\n");
+        System.out.print("       Temperature    |       Temperature\n");
+        System.out.print("        (degrees)     |        (degrees)\n");
+        System.out.print("      F          C    |      C          F\n");
+        for (int count = 0; count < 100; count++) {
+            double i = tempBase += 5;
+            double j = celToFah(i);
+            double k = fahToCel(i);
+            System.out.printf("%10.3f %10.3f | %10.3f %10.3f \n", i,
+k, i, j);
+            }
+        }
+    }
