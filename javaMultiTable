@@ -1,0 +1,36 @@
+/*This program displays the multiplication table for up to 12x12
+I use if statements to match the formatting on each result.
+My original attempt had 3 System.out.print statements,I used concatenation
+to make it simpler and easier to read.
+I prefer the >= 10 as opposed to the the > 9 for easier reading.
+Could add user inputs and add 2 if formatting statements to allow for
+a maximum of 100*100
+table
+*/
+package multi;
+
+public class multiplicationTable{
+    public static void main(String[] args) {
+
+        for (int i = 0;i <= 12; i++) { //creates first column
+            if (i == 0) { System.out.print("     |");} //hides the
+first 0 to match assignment
+            if (i > 0 && i < 10){ System.out.print("   " + i + " |");}
+            if (i >= 10 && i < 100) { System.out.print("  " + i + " |");}
+            if (i >= 100) { System.out.print("i" + i + " |");}
+
+            for (int j = 1;j <= 12; j++) { //fills rows
+                int result = j*i;
+                if (result == 0) {result = j*(i+1);} //fills first row
+with the multiplication instead of a row of 0's
+                if (result > 0 && result < 10){ System.out.print("   "
++ result + " |");}
+                if (result >= 10 && result < 100) { System.out.print("
+ " + result + " |");}
+                if (result >= 100) { System.out.print(" " + result + " |");}
+            }
+            System.out.println(); //adds new line for every row of
+multiplication
+        }
+    }
+}
